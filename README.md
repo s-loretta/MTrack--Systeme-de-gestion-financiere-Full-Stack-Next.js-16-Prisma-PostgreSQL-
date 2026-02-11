@@ -6,7 +6,11 @@ Une application complète de gestion financière permettant de suivre ses revenu
 
 Voici un aperçu des fonctionnalités de l'application :
 
-[Lien vers la démo vidéo ou GIF]
+
+
+
+https://github.com/user-attachments/assets/984d6ac9-2e11-4644-b29e-15e735079eb7
+
 
 ---
 
