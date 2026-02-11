@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@clerk/nextjs": "^6.37.3",
+    "@clerk/shared": "^3.44.0",
     "@prisma/client": "^6.18.0",
     "dotenv": "^17.2.3",
     "emoji-picker-react": "^4.15.1",
