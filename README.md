@@ -1,74 +1,79 @@
-MTrack — Full-Stack Finance Dashboard
-Une solution complète de gestion financière personnelle permettant de suivre ses revenus, de fixer des budgets par catégorie et de visualiser ses habitudes de dépenses à travers une interface moderne et intuitive.
+💰 MTrack — Système de Gestion Financière Full-Stack
 
-💻 Technologies Utilisées
-Ce projet repose sur une stack technique de pointe, choisie pour sa performance, sa sécurité et sa scalabilité.
+Une application complète de gestion financière permettant de suivre ses revenus, de fixer des budgets et de visualiser ses dépenses en temps réel, le tout dans une interface fluide et professionnelle.
 
-Framework Frontend : Next.js 16 (App Router)
+## 📺 Démonstration Vidéo
 
-Langage : TypeScript (Typage strict pour une maintenance robuste).
+Voici un aperçu des fonctionnalités de l'application :
 
-Base de Données & ORM : PostgreSQL avec Prisma (Gestion simplifiée du schéma et des requêtes).
+[Lien vers la démo vidéo ou GIF]
 
-Authentification : Clerk (Gestion sécurisée des utilisateurs et sessions).
+---
 
-Styling : Tailwind CSS & Shadcn/UI (Composants élégants et accessibles).
+## 💻 Technologies Utilisées
 
-Hébergement : Vercel (Optimisé pour Next.js).
+Ce projet a été développé avec une architecture moderne axée sur la performance, la sécurité et la maintenabilité.
 
-✨ Fonctionnalités (Features)
-L'application MTrack offre une expérience utilisateur fluide avec des fonctionnalités clés :
+* **Frontend Framework** : [Next.js 16](https://nextjs.org/) (App Router)
+* **Langage** : [TypeScript](https://www.typescriptlang.org/) (Assurant un typage strict et une robustesse du code)
+* **Authentification** : [Clerk](https://clerk.com/) (Gestion sécurisée des utilisateurs et des sessions)
+* **Base de Données & ORM** : [PostgreSQL](https://www.postgresql.org/) avec [Prisma](https://www.prisma.io/)
+* **Styling** : [Tailwind CSS](https://tailwindcss.com/) & [Shadcn/UI](https://ui.shadcn.com/) (Interface réactive et composants modernes)
+* **Déploiement** : [Vercel](https://vercel.com/)
 
-Tableau de Bord Analytique : Vue d'ensemble de la santé financière avec des graphiques interactifs.
+---
 
-Gestion des Budgets : Création de plafonds de dépenses par catégorie avec barre de progression en temps réel.
+## ✨ Fonctionnalités (Features)
 
-Suivi des Transactions : Historique complet des revenus et dépenses avec filtrage et tri.
+L'application **MTrack** est dotée des fonctionnalités principales suivantes :
 
-Authentification Sécurisée : Connexion via Google ou Email grâce à l'intégration Clerk.
+* **Tableau de Bord Dynamique** : Visualisation globale de la santé financière avec des graphiques interactifs.
+* **Gestion des Budgets** : Création de budgets par catégorie avec suivi de la progression des dépenses.
+* **Historique des Transactions** : Liste complète des revenus et dépenses avec possibilité d'ajout et de suppression.
+* **Authentification Sécurisée** : Connexion via Google ou Email protégée par Clerk.
+* **Synchronisation en Temps Réel** : Mise à jour instantanée des soldes et des graphiques lors de l'ajout de transactions.
+* **Design Responsive** : Expérience optimisée pour PC, tablette et mobile.
 
-Interface Responsive : Design optimisé pour une utilisation sur ordinateur, tablette et smartphone.
+---
 
-Mode Sombre/Clair : Support natif du thème préféré de l'utilisateur.
+## 🛠️ Processus de Création
 
-🛠️ Processus de Création
-Ce projet a été conçu selon les meilleures pratiques du développement web moderne :
+Ce projet a été structuré pour simuler une application SaaS réelle :
 
-Modélisation Relationnelle : Conception du schéma de données avec Prisma pour gérer les relations entre utilisateurs, budgets et transactions.
+1.  **Modélisation des Données** : Définition des schémas Prisma pour les Budgets et les Transactions avec relations utilisateurs.
+2.  **Architecture Server-First** : Utilisation des *Server Actions* de Next.js pour une manipulation sécurisée des données sans API externes lourdes.
+3.  **Gestion de la Sécurité** : Mise en place de middlewares pour restreindre l'accès aux tableaux de bord aux seuls utilisateurs connectés.
+4.  **Optimisation UI** : Utilisation de DaisyUI et Lucide-React pour une iconographie et des composants visuellement cohérents.
 
-Architecture Server-Side : Utilisation intensive des Server Components et Server Actions de Next.js pour optimiser la vitesse de chargement et le SEO.
+---
 
-Validation de Données : Implémentation de Zod pour valider les entrées des formulaires côté client et serveur.
+## ⚙️ Démarrer le Projet Localement
 
-Déploiement Continu : Mise en place d'un pipeline CI/CD via Vercel pour des mises à jour automatiques à chaque push.
+Suivez ces instructions pour cloner et exécuter l'application sur votre machine.
 
-⚙️ Démarrer le Projet Localement
-Prérequis
-Node.js (v18.0 ou supérieur)
+### Prérequis
+* **Node.js** (v18+)
+* **npm** ou **yarn**
+* Un compte **Clerk** (pour les clés API)
 
-npm ou pnpm
-
-Une instance PostgreSQL (ou Vercel Postgres)
-
-1. Clonage du Répertoire
-PowerShell
-git clone https://github.com/[TON_PSEUDO]/MTrack.git
+### 1. Clonage du Répertoire
+```bash
+git clone [https://github.com/](https://github.com/)[TON_PSEUDO]/MTrack.git
 cd MTrack
-2. Configuration de l'environnement
-Créez un fichier .env à la racine et ajoutez vos clés :
+2. Installation des Dépendances
+Bash
+npm install
+3. Configuration de l'environnement
+Créez un fichier .env.local à la racine et ajoutez vos variables :
 
 Extrait de code
-DATABASE_URL="votre_url_postgres"
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY="votre_cle_clerk"
-CLERK_SECRET_KEY="votre_secret_clerk"
-3. Installation et Lancement
-PowerShell
-# Installation des dépendances
-npm install
-
-# Synchronisation de la base de données
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=votre_cle
+CLERK_SECRET_KEY=votre_secret
+DATABASE_URL=votre_url_postgres
+4. Lancement de la Base de Données & App
+Bash
 npx prisma db push
-
-# Lancement du serveur de développement
 npm run dev
-L'application sera accessible sur http://localhost:3000
+L'application s'ouvrira à l'adresse http://localhost:3000.
+
+Déployé avec ❤️ sur Vercel.
